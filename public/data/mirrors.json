@@ -1,0 +1,1514 @@
+{
+  "meta": {
+    "title": "Dev Mirror Hub",
+    "updatedAt": "2026-09-07T13:41:14.865Z"
+  },
+  "categories": [
+    {
+      "id": "npm",
+      "name": "npm / Node"
+    },
+    {
+      "id": "pypi",
+      "name": "Python (pip)"
+    },
+    {
+      "id": "maven",
+      "name": "Maven / Gradle"
+    },
+    {
+      "id": "go",
+      "name": "Go modules"
+    },
+    {
+      "id": "rust",
+      "name": "Rust crates"
+    },
+    {
+      "id": "docker",
+      "name": "Docker Hub"
+    },
+    {
+      "id": "apt",
+      "name": "Linux 系统源"
+    },
+    {
+      "id": "brew",
+      "name": "Homebrew"
+    },
+    {
+      "id": "flutter",
+      "name": "Flutter"
+    },
+    {
+      "id": "conda",
+      "name": "Conda"
+    },
+    {
+      "id": "helm",
+      "name": "Helm Charts"
+    },
+    {
+      "id": "ruby",
+      "name": "Ruby (gems)"
+    },
+    {
+      "id": "php",
+      "name": "PHP (Composer)"
+    },
+    {
+      "id": "dotnet",
+      "name": ".NET (NuGet)"
+    }
+  ],
+  "mirrors": [
+    {
+      "id": "npmmirror",
+      "category": "npm",
+      "name": "淘宝 npmmirror",
+      "provider": "阿里云",
+      "url": "https://registry.npmmirror.com",
+      "desc": "阿里系维护的 npm 官方仓库镜像，国内使用最广、更新及时",
+      "usage": {
+        "label": "npm 配置",
+        "steps": [
+          {
+            "cmd": "npm config set registry https://registry.npmmirror.com",
+            "note": "设置全局镜像源，对当前用户所有项目生效"
+          },
+          {
+            "cmd": "npm config get registry",
+            "note": "验证是否生效，输出应为上述镜像地址"
+          }
+        ],
+        "notes": [
+          "恢复官方源：npm config set registry https://registry.npmjs.org",
+          "也可用 nrm 管理多个镜像源：nrm use npmmirror"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 148,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "tencent-npm",
+      "category": "npm",
+      "name": "腾讯云 npm",
+      "provider": "腾讯云",
+      "url": "https://mirrors.cloud.tencent.com/npm/",
+      "desc": "腾讯云 npm 镜像，公司与教育网均可用",
+      "usage": {
+        "label": "npm 配置",
+        "steps": [
+          {
+            "cmd": "npm config set registry https://mirrors.cloud.tencent.com/npm/",
+            "note": "设置全局镜像源"
+          }
+        ],
+        "notes": [
+          "恢复官方源：npm config set registry https://registry.npmjs.org",
+          "与 npmmirror 二选一即可，必要时可互相切换"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 217,
+        "status": 404,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "ustc-npm",
+      "category": "npm",
+      "name": "中科大 npm",
+      "provider": "中国科学技术大学",
+      "url": "https://mirrors.ustc.edu.cn/npm/",
+      "desc": "中科大镜像站提供的 npm registry 镜像",
+      "usage": {
+        "label": "npm 配置",
+        "steps": [
+          {
+            "cmd": "npm config set registry https://mirrors.ustc.edu.cn/npm/",
+            "note": "设置全局镜像源"
+          }
+        ],
+        "notes": [
+          "恢复官方源：npm config set registry https://registry.npmjs.org",
+          "高校源在教育网环境下速度更快"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 190,
+        "status": 404,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "tuna-pypi",
+      "category": "pypi",
+      "name": "清华 TUNA PyPI",
+      "provider": "清华大学",
+      "url": "https://pypi.tuna.tsinghua.edu.cn/simple",
+      "desc": "清华大学开源镜像站提供的 PyPI 镜像",
+      "usage": {
+        "label": "pip 配置",
+        "steps": [
+          {
+            "cmd": "pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple",
+            "note": "写入全局配置文件（Linux/macOS：~/.config/pip/pip.conf，Windows：%APPDATA%\\pip\\pip.ini）"
+          },
+          {
+            "cmd": "pip install 包名 -i https://pypi.tuna.tsinghua.edu.cn/simple",
+            "note": "不加 -i 参数时为临时使用镜像，不修改全局配置"
+          }
+        ],
+        "notes": [
+          "验证：pip config list 查看当前全部配置",
+          "恢复官方源：pip config unset global.index-url"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 494,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "aliyun-pypi",
+      "category": "pypi",
+      "name": "阿里云 PyPI",
+      "provider": "阿里云",
+      "url": "https://mirrors.aliyun.com/pypi/simple/",
+      "desc": "阿里云 PyPI 镜像，公网访问速度快",
+      "usage": {
+        "label": "pip 配置",
+        "steps": [
+          {
+            "cmd": "pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/",
+            "note": "写入全局配置文件"
+          }
+        ],
+        "notes": [
+          "同步官方 PyPI，新包同步延迟约数小时",
+          "临时使用：pip install 包名 -i https://mirrors.aliyun.com/pypi/simple/"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 53,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "ustc-pypi",
+      "category": "pypi",
+      "name": "中科大 PyPI",
+      "provider": "中国科学技术大学",
+      "url": "https://pypi.mirrors.ustc.edu.cn/simple",
+      "desc": "中科大 PyPI 镜像，教育网用户优先选择",
+      "usage": {
+        "label": "pip 配置",
+        "steps": [
+          {
+            "cmd": "pip config set global.index-url https://pypi.mirrors.ustc.edu.cn/simple",
+            "note": "写入全局配置文件"
+          }
+        ],
+        "notes": [
+          "教育网内速度极佳，公网用户视所在网络选择",
+          "临时使用：pip install 包名 -i https://pypi.mirrors.ustc.edu.cn/simple"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 420,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "sjtu-pypi",
+      "category": "pypi",
+      "name": "上海交大 PyPI",
+      "provider": "上海交通大学",
+      "url": "https://mirror.sjtu.edu.cn/pypi/web/simple",
+      "desc": "上海交大 SJTUG 提供的 PyPI 镜像",
+      "usage": {
+        "label": "pip 配置",
+        "steps": [
+          {
+            "cmd": "pip config set global.index-url https://mirror.sjtu.edu.cn/pypi/web/simple",
+            "note": "写入全局配置文件"
+          }
+        ],
+        "notes": [
+          "位于教育网出口，华东地区访问较优",
+          "若需 extra-index-url 注意与主源格式一致"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 110,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "aliyun-maven-public",
+      "category": "maven",
+      "name": "阿里云 Maven Central",
+      "provider": "阿里云",
+      "url": "https://maven.aliyun.com/repository/public",
+      "desc": "同步 Maven Central + JCenter 聚合仓库，Java/Gradle 首选",
+      "usage": {
+        "label": "Maven settings.xml 配置",
+        "steps": [
+          {
+            "cmd": "<mirror>\n  <id>aliyun</id>\n  <mirrorOf>central</mirrorOf>\n  <url>https://maven.aliyun.com/repository/public</url>\n</mirror>",
+            "note": "将以上内容加入 ~/.m2/settings.xml 的 <mirrors> 节点"
+          },
+          {
+            "cmd": "mvn dependency:resolve",
+            "note": "验证是否生效，观察日志是否命中镜像地址"
+          }
+        ],
+        "notes": [
+          "Gradle 使用：maven { url 'https://maven.aliyun.com/repository/public' }",
+          "mirrorOf 只镜像 central，避免影响其它仓库"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 195,
+        "status": 404,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "aliyun-maven-google",
+      "category": "maven",
+      "name": "阿里云 Google Maven",
+      "provider": "阿里云",
+      "url": "https://maven.aliyun.com/repository/google",
+      "desc": "Google Maven（含 AndroidX）镜像，Android 开发必需",
+      "usage": {
+        "label": "Gradle 仓库配置",
+        "steps": [
+          {
+            "cmd": "maven { url 'https://maven.aliyun.com/repository/google' }",
+            "note": "加入 settings.gradle 的 pluginManagement / dependencyResolutionManagement 的 repositories"
+          }
+        ],
+        "notes": [
+          "grradle 7.x / 8.x 均在 settings.gradle 中配置",
+          "建议同时保留 google() 官方仓库作为兜底"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 117,
+        "status": 404,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "huawei-maven",
+      "category": "maven",
+      "name": "华为云 Maven",
+      "provider": "华为云",
+      "url": "https://repo.huaweicloud.com/repository/maven/",
+      "desc": "华为云 Maven 镜像，Maven Central 同步",
+      "usage": {
+        "label": "Maven settings.xml 配置",
+        "steps": [
+          {
+            "cmd": "<mirror>\n  <id>huawei</id>\n  <mirrorOf>central</mirrorOf>\n  <url>https://repo.huaweicloud.com/repository/maven/</url>\n</mirror>",
+            "note": "加入 ~/.m2/settings.xml 的 <mirrors> 节点"
+          }
+        ],
+        "notes": [
+          "Gradle 使用：maven { url 'https://repo.huaweicloud.com/repository/maven/' }",
+          "与阿里云源互为备用"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 255,
+        "status": 403,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "tencent-maven",
+      "category": "maven",
+      "name": "腾讯云 Maven",
+      "provider": "腾讯云",
+      "url": "https://mirrors.cloud.tencent.com/nexus/repository/maven-public/",
+      "desc": "腾讯云 Maven 聚合仓库",
+      "usage": {
+        "label": "Gradle 仓库配置",
+        "steps": [
+          {
+            "cmd": "maven { url 'https://mirrors.cloud.tencent.com/nexus/repository/maven-public/' }",
+            "note": "加入 settings.gradle 的 repositories"
+          }
+        ],
+        "notes": [
+          "Gradle 原生仓库写法与阿里云一致",
+          "可多个国内源同时配置，按顺序降级"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 56,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "goproxy-cn",
+      "category": "go",
+      "name": "goproxy.cn",
+      "provider": "七牛云",
+      "url": "https://goproxy.cn",
+      "desc": "七牛云维护的 Go module 镜像，公网首选",
+      "usage": {
+        "label": "GOPROXY 配置",
+        "steps": [
+          {
+            "cmd": "go env -w GOPROXY=https://goproxy.cn,direct",
+            "note": "直接写入 Go 环境变量，全局生效"
+          },
+          {
+            "cmd": "go env -w GOSUMDB=sum.golang.google.cn",
+            "note": "同时把校验数据库也切到国内可访问的域"
+          }
+        ],
+        "notes": [
+          "go env GOPROXY 查看当前值",
+          "GOPROXY 的 modules 同时支持 git clone 协议"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 43,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "goproxy-io",
+      "category": "go",
+      "name": "goproxy.io",
+      "provider": "社区",
+      "url": "https://goproxy.io",
+      "desc": "全球服务的 Go module 代理，国内可用作备用",
+      "usage": {
+        "label": "GOPROXY 配置",
+        "steps": [
+          {
+            "cmd": "go env -w GOPROXY=https://goproxy.io,direct",
+            "note": "写入环境变量"
+          }
+        ],
+        "notes": [
+          "与 goproxy.cn 可互相替换",
+          "部分网络下需要科学上网才能直连 goproxy.io"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 1254,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "ustc-goproxy",
+      "category": "go",
+      "name": "中科大 Go proxy",
+      "provider": "中国科学技术大学",
+      "url": "https://mirrors.ustc.edu.cn/goproxy/",
+      "desc": "中科大镜像站提供的 Go module 代理",
+      "usage": {
+        "label": "GOPROXY 配置",
+        "steps": [
+          {
+            "cmd": "go env -w GOPROXY=https://mirrors.ustc.edu.cn/goproxy/,direct",
+            "note": "注意结尾带斜杠"
+          }
+        ],
+        "notes": [
+          "教育网环境优先于公网源",
+          "与 goproxy.cn 二选一"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 59,
+        "status": 404,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "rsproxy",
+      "category": "rust",
+      "name": "rsproxy.cn",
+      "provider": "字节跳动",
+      "url": "https://rsproxy.cn",
+      "desc": "字节跳动维护的 crates 镜像，支持 sparse 协议",
+      "usage": {
+        "label": "cargo 配置",
+        "steps": [
+          {
+            "cmd": "[source.crates-io]\nreplace-with = 'rsproxy-sparse'\n\n[source.rsproxy-sparse]\nregistry = \"sparse+https://rsproxy.cn/index/\"",
+            "note": "写入 ~/.cargo/config.toml（Windows 为 %USERPROFILE%\\.cargo\\config.toml）"
+          }
+        ],
+        "notes": [
+          "sparse 协议为 cargo 1.68+ 默认支持，无需 git",
+          "依赖更新：cargo update"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 154,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "ustc-crates",
+      "category": "rust",
+      "name": "中科大 crates 镜像",
+      "provider": "中国科学技术大学",
+      "url": "https://mirrors.ustc.edu.cn/crates.io-index/",
+      "desc": "中科大 Rust crates 索引镜像",
+      "usage": {
+        "label": "cargo 配置",
+        "steps": [
+          {
+            "cmd": "[source.crates-io]\nreplace-with = 'ustc'\n\n[source.ustc]\nregistry = \"git://mirrors.ustc.edu.cn/crates.io-index\"",
+            "note": "写入 ~/.cargo/config.toml"
+          }
+        ],
+        "notes": [
+          "git 协议源首次拉取索引较慢，sparse 源优先",
+          "也可改用 https://mirrors.ustc.edu.cn/crates.io-index 的 git 地址"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 457,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "daocloud-docker",
+      "category": "docker",
+      "name": "DaoCloud 镜像站",
+      "provider": "DaoCloud",
+      "url": "https://docker.m.daocloud.io",
+      "desc": "支持 Docker Hub / GCR / GHCR / Quay 等，覆盖仓库最全",
+      "usage": {
+        "label": "docker daemon.json 配置",
+        "steps": [
+          {
+            "cmd": "sudo mkdir -p /etc/docker\n\nsudo tee /etc/docker/daemon.json <<'EOF'\n{\n  \"registry-mirrors\": [\"https://docker.m.daocloud.io\"]\n}\nEOF\n\nsudo systemctl daemon-reload\nsudo systemctl restart docker",
+            "note": "Linux 使用 systemd 的推荐写法"
+          },
+          {
+            "cmd": "docker pull docker.m.daocloud.io/library/nginx",
+            "note": "不想改 daemon 时，直接在拉取命令里替换仓库前缀"
+          }
+        ],
+        "notes": [
+          "GCR：gcr.m.daocloud.io；GHCR：ghcr.m.daocloud.io；Quay：quay.m.daocloud.io；K8s：k8s-gcr.m.daocloud.io",
+          "Windows/Mac 的 Docker Desktop 在 Settings > Docker Engine 里编辑同一段 JSON 后 Apply",
+          "docker info | grep -A2 'Registry Mirrors' 验证配置生效"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 82,
+        "status": 302,
+        "error": null,
+        "time": "2026-09-07T13:42:40.550Z"
+      }
+    },
+    {
+      "id": "nju-docker",
+      "category": "docker",
+      "name": "南京大学镜像站",
+      "provider": "南京大学",
+      "url": "https://docker.nju.edu.cn",
+      "desc": "南大 e-Science 容器缓存，支持 GCR / GHCR / Quay / NGC",
+      "usage": {
+        "label": "docker daemon.json 配置",
+        "steps": [
+          {
+            "cmd": "{ \"registry-mirrors\": [\"https://docker.nju.edu.cn\"] }",
+            "note": "写入 /etc/docker/daemon.json 后重启 docker"
+          }
+        ],
+        "notes": [
+          "GCR：gcr.nju.edu.cn；GHCR：ghcr.nju.edu.cn；Quay：quay.nju.edu.cn；NGC：ngc.nju.edu.cn",
+          "以上四个仓库不支持 registry-mirrors，需在 docker pull 时直接替换域名"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 95,
+        "status": 403,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "1panel-docker",
+      "category": "docker",
+      "name": "1Panel 镜像加速",
+      "provider": "1Panel 社区",
+      "url": "https://docker.1panel.live",
+      "desc": "1Panel 开源运维面板提供的 Docker Hub 加速（2024 年后仍较稳定的社区源）",
+      "usage": {
+        "label": "docker daemon.json 配置",
+        "steps": [
+          {
+            "cmd": "{ \"registry-mirrors\": [\"https://docker.1panel.live\"] }",
+            "note": "写入 /etc/docker/daemon.json 后重启 docker"
+          }
+        ],
+        "notes": [
+          "对普通浏览器 GET 返回 403 属正常反爬策略，docker pull 不受影响",
+          "社区免费源稳定性略低于商业与高校源，建议作为候补"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 704,
+        "status": 403,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "tuna-ubuntu",
+      "category": "apt",
+      "name": "清华 Ubuntu 源",
+      "provider": "清华大学",
+      "url": "https://mirrors.tuna.tsinghua.edu.cn/ubuntu/",
+      "desc": "Ubuntu 系统软件源镜像",
+      "usage": {
+        "label": "sources.list 替换",
+        "steps": [
+          {
+            "cmd": "sudo sed -i 's|http://archive.ubuntu.com/ubuntu|https://mirrors.tuna.tsinghua.edu.cn/ubuntu|g' /etc/apt/sources.list\nsudo apt update",
+            "note": "新版 Ubuntu 的源可能在 /etc/apt/sources.list.d/ 下，建议直接用官方镜像生成器"
+          }
+        ],
+        "notes": [
+          "清华站提供自动化生成脚本：https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/",
+          "Ubuntu 24.04 之后默认使用 deb822 格式（.sources 文件）"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 226,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "aliyun-ubuntu",
+      "category": "apt",
+      "name": "阿里云 Ubuntu 源",
+      "provider": "阿里云",
+      "url": "https://mirrors.aliyun.com/ubuntu/",
+      "desc": "阿里云 Ubuntu 软件源，覆盖各版本",
+      "usage": {
+        "label": "sources.list 替换",
+        "steps": [
+          {
+            "cmd": "sudo sed -i 's|http://archive.ubuntu.com/ubuntu|https://mirrors.aliyun.com/ubuntu|g' /etc/apt/sources.list\nsudo apt update",
+            "note": "同时把 security.ubuntu.com 替换为 mirrors.aliyun.com/ubuntu"
+          }
+        ],
+        "notes": [
+          "阿里云源在云服务器（尤其阿里云 ECS）内网软链路更快",
+          "同步速度较清华略慢，部分新包可能滞后"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 245,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "ustc-ubuntu",
+      "category": "apt",
+      "name": "中科大 Ubuntu 源",
+      "provider": "中国科学技术大学",
+      "url": "https://mirrors.ustc.edu.cn/ubuntu/",
+      "desc": "中科大 Ubuntu 软件源，教育网主力源",
+      "usage": {
+        "label": "sources.list 替换",
+        "steps": [
+          {
+            "cmd": "sudo sed -i 's|http://archive.ubuntu.com/ubuntu|https://mirrors.ustc.edu.cn/ubuntu|g' /etc/apt/sources.list\nsudo apt update",
+            "note": "教育网内速度最快的主源之一"
+          }
+        ],
+        "notes": [
+          "中科大源同时镜像 ports（ARM 等架构）",
+          "help 页：https://mirrors.ustc.edu.cn/help/ubuntu.html"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 59,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "tuna-brew",
+      "category": "brew",
+      "name": "清华 Homebrew 源",
+      "provider": "清华大学",
+      "url": "https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git",
+      "desc": "Homebrew 本体 + 核心库镜像",
+      "usage": {
+        "label": "环境变量 + git remote 配置",
+        "steps": [
+          {
+            "cmd": "export HOMEBREW_BREW_GIT_REMOTE=\"https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git\"\nexport HOMEBREW_CORE_GIT_REMOTE=\"https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git\"",
+            "note": "写入 ~/.zshrc 或 ~/.bashrc（Windows Git Bash 为 ~/.bashrc）"
+          },
+          {
+            "cmd": "export HOMEBREW_BOTTLE_DOMAIN=\"https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles\"",
+            "note": "二进制瓶下载也走镜像（仅 macOS / Linux）"
+          }
+        ],
+        "notes": [
+          "每次安装/更新 brew 前需 source 环境变量或重启终端",
+          "首次安装脚本：export HOMEBREW_INSTALL_FROM_API=1 后执行官方安装脚本"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 75,
+        "status": 404,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "ustc-brew",
+      "category": "brew",
+      "name": "中科大 Homebrew 源",
+      "provider": "中国科学技术大学",
+      "url": "https://mirrors.ustc.edu.cn/brew.git",
+      "desc": "中科大 Homebrew 镜像",
+      "usage": {
+        "label": "git remote 替换",
+        "steps": [
+          {
+            "cmd": "cd \"$(brew --repo)\" && git remote set-url origin https://mirrors.ustc.edu.cn/brew.git\ncd \"$(brew --repo homebrew/core)\" && git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git",
+            "note": "已有本地安装时直接改 remote"
+          }
+        ],
+        "notes": [
+          "与清华源二选一即可（Education 网络表现更好）",
+          "bottle 源：https://mirrors.ustc.edu.cn/homebrew-bottles"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 499,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "flutter-cn",
+      "category": "flutter",
+      "name": "Flutter 官方中国镜像",
+      "provider": "Google",
+      "url": "https://storage.flutter-io.cn",
+      "desc": "Flutter 官方提供的大陆镜像，覆盖 PUB_HOSTED_URL 与 SDK 下载",
+      "usage": {
+        "label": "环境变量配置",
+        "steps": [
+          {
+            "cmd": "export PUB_HOSTED_URL=https://pub.flutter-io.cn\nexport FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn",
+            "note": "macOS/Linux 写入 ~/.zshrc 或 ~/.bashrc"
+          },
+          {
+            "cmd": "setx PUB_HOSTED_URL \"https://pub.flutter-io.cn\"\nsetx FLUTTER_STORAGE_BASE_URL \"https://storage.flutter-io.cn\"",
+            "note": "Windows 使用 setx 写入用户环境变量，重启终端生效"
+          }
+        ],
+        "notes": [
+          "PUB_HOSTED_URL 加速 pub.dev 包下载",
+          "FLUTTER_STORAGE_BASE_URL 加速 SDK/引擎二进制下载"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 379,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "tuna-conda",
+      "category": "conda",
+      "name": "清华 Anaconda 源",
+      "provider": "清华大学",
+      "url": "https://mirrors.tuna.tsinghua.edu.cn/anaconda",
+      "desc": "Anaconda 软件包镜像（2026-08 曾短暂移除后已恢复）",
+      "usage": {
+        "label": "conda 配置",
+        "steps": [
+          {
+            "cmd": "conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main\nconda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r\nconda config --set show_channel_urls yes",
+            "note": "pkgs/free 已停止更新，无需添加"
+          }
+        ],
+        "notes": [
+          "验证：conda config --show channels",
+          "恢复默认：conda config --remove-key channels"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 280,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "ustc-conda",
+      "category": "conda",
+      "name": "中科大 Anaconda 源",
+      "provider": "中国科学技术大学",
+      "url": "https://mirrors.ustc.edu.cn/anaconda/",
+      "desc": "中科大 Anaconda 软件包镜像",
+      "usage": {
+        "label": "conda 配置",
+        "steps": [
+          {
+            "cmd": "conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/main\nconda config --set show_channel_urls yes",
+            "note": "教育网用户优先选此源"
+          }
+        ],
+        "notes": [
+          "若环境中已有 conda-forge，保持 conda-forge 在最后优先级较低即可",
+          "与清华源二选一"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 661,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "aliyun-helm",
+      "category": "helm",
+      "name": "阿里云 Helm Charts",
+      "provider": "阿里云",
+      "url": "https://mirrors.aliyun.com/helm/charts/",
+      "desc": "阿里云 Helm Chart 仓库镜像",
+      "usage": {
+        "label": "helm repo 配置",
+        "steps": [
+          {
+            "cmd": "helm repo add aliyun https://mirrors.aliyun.com/helm/charts/",
+            "note": "添加仓库到本地"
+          },
+          {
+            "cmd": "helm repo update",
+            "note": "拉取仓库索引"
+          }
+        ],
+        "notes": [
+          "同步官方 incubator / stable 两个主要 chart 源",
+          "下载排产：helm repo list 与 helm search repo"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 257,
+        "status": 404,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "npmmirror-node",
+      "category": "npm",
+      "name": "Node.js 发行版镜像",
+      "provider": "阿里云",
+      "url": "https://npmmirror.com/mirrors/node/",
+      "desc": "Node.js 官方二进制安装包镜像",
+      "usage": {
+        "label": "手动下载",
+        "steps": [
+          {
+            "cmd": "curl -fsSL https://npmmirror.com/mirrors/node/v20.15.0/node-v20.15.0-linux-x64.tar.xz",
+            "note": "将版本号替换为所需版本，路径规则与官方一致"
+          }
+        ],
+        "notes": [
+          "nvm 用户：export NVM_NODEJS_ORG_MIRROR=https://npmmirror.com/mirrors/node",
+          "也提供 npm、yarn、pnpm 等其它发行版镜像"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 122,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "npmmirror-electron",
+      "category": "npm",
+      "name": "Electron 二进制镜像",
+      "provider": "阿里云",
+      "url": "https://npmmirror.com/mirrors/electron/",
+      "desc": "Electron npm 包下载时所需的二进制镜像",
+      "usage": {
+        "label": ".npmrc 配置",
+        "steps": [
+          {
+            "cmd": "ELECTRON_MIRROR=https://npmmirror.com/mirrors/electron/",
+            "note": "写入项目 .npmrc 或用户级 ~/.npmrc"
+          }
+        ],
+        "notes": [
+          "安装前清缓存：npm cache clean --force",
+          "也可用环境变量设置全局生效"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 66,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "aliyun-gradle",
+      "category": "maven",
+      "name": "Gradle 发行包镜像",
+      "provider": "阿里云",
+      "url": "https://mirrors.aliyun.com/gradle/",
+      "desc": "Gradle 发行版 zip 下载镜像",
+      "usage": {
+        "label": "gradle-wrapper 配置",
+        "steps": [
+          {
+            "cmd": "distributionUrl=https\\://mirrors.aliyun.com/gradle/gradle-8.7-bin.zip",
+            "note": "将 gradle/wrapper/gradle-wrapper.properties 中的 distributionUrl 改为上述地址"
+          },
+          {
+            "cmd": "腾讯云备用：https\\://mirrors.cloud.tencent.com/gradle/gradle-8.7-bin.zip",
+            "note": "二者任选其一"
+          }
+        ],
+        "notes": [
+          "版本号需与官方发布版本一致才能下载成功",
+          "修改后重新 sync 项目即可"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 40,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "tencent-androidsdk",
+      "category": "maven",
+      "name": "Android SDK 镜像",
+      "provider": "腾讯云",
+      "url": "https://mirrors.cloud.tencent.com/AndroidSDK/",
+      "desc": "腾讯云 Android SDK 组件镜像",
+      "usage": {
+        "label": "SDK Manager 代理设置",
+        "steps": [
+          {
+            "cmd": "SDK Manager > Tools > Options\nHTTP Proxy Server：mirrors.cloud.tencent.com\nHTTP Proxy Port：80",
+            "note": "勾选 Force https://... sources to be fetched using http://...，然后 Packages > Reload"
+          }
+        ],
+        "notes": [
+          "Gradle 分发包也可替换：mirrors.cloud.tencent.com/gradle/gradle-8.x-bin.zip",
+          "Maven 依赖请配合阿里 Google Maven 源使用"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 206,
+        "status": 400,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "tuna-adoptium",
+      "category": "maven",
+      "name": "Adoptium JDK 镜像",
+      "provider": "清华大学",
+      "url": "https://mirrors.tuna.tsinghua.edu.cn/Adoptium/",
+      "desc": "清华镜像的 Adoptium（Eclipse Temurin JDK）发行包",
+      "usage": {
+        "label": "下载 JDK",
+        "steps": [
+          {
+            "cmd": "https://mirrors.tuna.tsinghua.edu.cn/Adoptium/<version>/<jvm-impl>/<architecture>/<os>/archive/",
+            "note": "例如 jdk-17/ /hotspot/ /x64/ /linux/ /archive/ 下选择 .tar.gz"
+          }
+        ],
+        "notes": [
+          "提供 Temurin 的 Linux / macOS / Windows 各架构包",
+          "比 Oracle 官网下载稳定且速度快"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 80,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "flutter-sjtu",
+      "category": "flutter",
+      "name": "上交大 Flutter 镜像",
+      "provider": "上海交通大学",
+      "url": "https://mirror.sjtu.edu.cn/dart-pub",
+      "desc": "上海交大 SJTUG 提供的 Flutter SDK / pub 镜像，官方文档认证的可信源",
+      "usage": {
+        "label": "Flutter 环境变量配置",
+        "steps": [
+          {
+            "cmd": "export PUB_HOSTED_URL=https://mirror.sjtu.edu.cn/dart-pub\nexport FLUTTER_STORAGE_BASE_URL=https://mirror.sjtu.edu.cn",
+            "note": "macOS/Linux 写入 ~/.zshrc 或 ~/.bashrc；Windows 用 setx 设置同名用户变量"
+          }
+        ],
+        "notes": [
+          "同属官方文档「在中国使用 Flutter」认证的 3 个可信镜像之一（CFUG / SJTU / TUNA）",
+          "SJTUG 站 dart-pub 偶发同步滞后，若拉到的 pub 包版本过旧可换 CFUG 或清华源"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 28,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "flutter-tuna",
+      "category": "flutter",
+      "name": "清华 Flutter 镜像",
+      "provider": "清华大学",
+      "url": "https://mirrors.tuna.tsinghua.edu.cn/flutter",
+      "desc": "清华 TUNA 提供的 Flutter SDK / pub 镜像，官方文档认证的可信源",
+      "usage": {
+        "label": "Flutter 环境变量配置",
+        "steps": [
+          {
+            "cmd": "export PUB_HOSTED_URL=https://mirrors.tuna.tsinghua.edu.cn/dart-pub\nexport FLUTTER_STORAGE_BASE_URL=https://mirrors.tuna.tsinghua.edu.cn/flutter",
+            "note": "macOS/Linux 写入 ~/.zshrc 或 ~/.bashrc；Windows 用 setx 设置同名用户变量"
+          }
+        ],
+        "notes": [
+          "2026-08 TUNA 公告曾移除 Flutter 镜像（仅保留 flutter-sdk.git），使用前以页面每日检测状态为准",
+          "若检测异常请直接换 CFUG 或上交大源"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 77,
+        "status": 404,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "huawei-npm",
+      "category": "npm",
+      "name": "华为云 npm",
+      "provider": "华为云",
+      "url": "https://mirrors.huaweicloud.com/repository/npm/",
+      "desc": "华为开源镜像站（CodeArts 维护）npm 仓库，同步较及时",
+      "usage": {
+        "label": "npm 配置",
+        "steps": [
+          {
+            "cmd": "npm config set registry https://mirrors.huaweicloud.com/repository/npm/\nnpm cache clean -f",
+            "note": "写入 ~/.npmrc；cache clean 避免残留旧缓存"
+          }
+        ],
+        "notes": [
+          "工具类加速（同一套配置）：npm config set disturl https://mirrors.huaweicloud.com/nodejs",
+          "华为云 ECS 内网访问更快；同步延迟一般 < 2h"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 133,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "huawei-pypi",
+      "category": "pypi",
+      "name": "华为云 PyPI",
+      "provider": "华为云",
+      "url": "https://repo.huaweicloud.com/repository/pypi/simple",
+      "desc": "华为开源镜像站 PyPI 镜像",
+      "usage": {
+        "label": "pip 配置",
+        "steps": [
+          {
+            "cmd": "pip config set global.index-url https://repo.huaweicloud.com/repository/pypi/simple\npip config set global.trusted-host repo.huaweicloud.com",
+            "note": "trusted-host 用于规避个别网络环境的 HTTPS 证书校验问题"
+          }
+        ],
+        "notes": [
+          "新版 pip 一般无需 trusted-host 即可使用",
+          "同步延迟一般 < 2h，个别包滞后可临时回官方：pip install 包名 -i https://pypi.org/simple"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 240,
+        "status": 429,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "huawei-ubuntu",
+      "category": "apt",
+      "name": "华为云 Ubuntu 源",
+      "provider": "华为云",
+      "url": "https://repo.huaweicloud.com/ubuntu/",
+      "desc": "华为云 Ubuntu 软件源（支持 x86 / ARM）",
+      "usage": {
+        "label": "sources.list 替换",
+        "steps": [
+          {
+            "cmd": "sudo sed -i 's|http://archive.ubuntu.com/ubuntu|https://repo.huaweicloud.com/ubuntu|g' /etc/apt/sources.list\nsudo apt update",
+            "note": "同时把 security.ubuntu.com 替换为 repo.huaweicloud.com/ubuntu"
+          }
+        ],
+        "notes": [
+          "另有 ubuntu-ports 供 ARM 平台使用",
+          "华为云 ECS 内网访问本区域镜像最快"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 118,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "sjtu-brew",
+      "category": "brew",
+      "name": "上交大 Homebrew 源",
+      "provider": "上海交通大学",
+      "url": "https://mirror.sjtu.edu.cn/git/brew.git",
+      "desc": "上海交大 SJTUG Homebrew 镜像",
+      "usage": {
+        "label": "git remote 替换",
+        "steps": [
+          {
+            "cmd": "cd \"$(brew --repo)\" && git remote set-url origin https://mirror.sjtu.edu.cn/git/brew.git\ncd \"$(brew --repo homebrew/core)\" && git remote set-url origin https://mirror.sjtu.edu.cn/git/homebrew-core.git",
+            "note": "已有本地安装时直接改 remote；新装用户可用 TUNA/USTC 的安装脚本"
+          }
+        ],
+        "notes": [
+          "bottle 源：https://mirror.sjtu.edu.cn/homebrew-bottles",
+          "华东教育网用户优先选择"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 202,
+        "status": 404,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "docker-1ms",
+      "category": "docker",
+      "name": "1ms 镜像加速",
+      "provider": "社区",
+      "url": "https://docker.1ms.run",
+      "desc": "社区维护的 Docker Hub 加速器（2024 年后较稳定的社区源之一）",
+      "usage": {
+        "label": "docker daemon.json 配置",
+        "steps": [
+          {
+            "cmd": "{ \"registry-mirrors\": [\"https://docker.1ms.run\"] }",
+            "note": "写入 /etc/desktop daemon.json（Docker Desktop 在 Settings > Docker Engine 编辑）后重启"
+          }
+        ],
+        "notes": [
+          "拉取：docker pull docker.1ms.run/library/nginx",
+          "社区免费源稳定性不如 DaoCloud / 高校源，建议仅作候补"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 411,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "docker-xuanyuan",
+      "category": "docker",
+      "name": "轩辕镜像加速",
+      "provider": "社区",
+      "url": "https://docker.xuanyuan.me",
+      "desc": "轩辕镜像免费版 Docker Hub 加速（境内合规运营，支持镜像搜索）",
+      "usage": {
+        "label": "docker daemon.json 配置",
+        "steps": [
+          {
+            "cmd": "{ \"registry-mirrors\": [\"https://docker.xuanyuan.me\"] }",
+            "note": "写入 daemon.json 后重启 docker"
+          }
+        ],
+        "notes": [
+          "免费版不保证长期稳定，有付费专业版可选",
+          "支持 macOS / Windows / Linux / NAS 等平台"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 1584,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "rubychina-gems",
+      "category": "ruby",
+      "name": "Ruby China Gems",
+      "provider": "Ruby China 社区",
+      "url": "https://gems.ruby-china.com",
+      "desc": "Ruby China 官方维护的 RubyGems 镜像，API 代理回源 + .gem 文件走国内 CDN",
+      "usage": {
+        "label": "gem 源配置",
+        "steps": [
+          {
+            "cmd": "gem sources --remove https://rubygems.org/\ngem sources -a https://gems.ruby-china.com/\ngem sources -l",
+            "note": "确认输出只剩 gems.ruby-china.com"
+          },
+          {
+            "cmd": "bundle config mirror.https://rubygems.org https://gems.ruby-china.com/",
+            "note": "Bundler 用户：无需修改 Gemfile，即镜像所有 https://rubygems.org 请求"
+          }
+        ],
+        "notes": [
+          "社区实测：清华/阿里/北外 gem 源存在逐版本遍历耗时长问题，Ruby China 与腾讯源无此问题",
+          "新发布 gem 实时生效（API 代理直连官方），大文件走国内 CDN ",
+          "个别网络/ISP 可能出现 TLS 证书校验失败提示（本地链路问题，服务器本身在线），遇到可换清华或华为源"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 289,
+        "status": 418,
+        "error": null,
+        "time": "2026-09-07T13:42:40.550Z"
+      }
+    },
+    {
+      "id": "tuna-rubygems",
+      "category": "ruby",
+      "name": "清华 RubyGems",
+      "provider": "清华大学",
+      "url": "https://mirrors.tuna.tsinghua.edu.cn/rubygems/",
+      "desc": "清华 TUNA 提供的 RubyGems 镜像",
+      "usage": {
+        "label": "gem 源配置",
+        "steps": [
+          {
+            "cmd": "gem source -a https://mirrors.tuna.tsinghua.edu.cn/rubygems/",
+            "note": "与官方源共存或单独使用均可"
+          }
+        ],
+        "notes": [
+          "社区实测存在逐版本遍历耗时问题（单 gem 安装可达 1 分半），优先推荐 Ruby China 源",
+          "适用于只能访问教育网域名的场景"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 81,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "aliyun-composer",
+      "category": "php",
+      "name": "阿里云 Composer",
+      "provider": "阿里云",
+      "url": "https://mirrors.aliyun.com/composer/",
+      "desc": "阿里云 Composer 全量镜像，与 Packagist 官方实时同步",
+      "usage": {
+        "label": "全局配置",
+        "steps": [
+          {
+            "cmd": "composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/",
+            "note": "三要素缺一不可：-g、键名 repo.packagist（单数）、URL 以 / 结尾"
+          },
+          {
+            "cmd": "composer config -g repo.packagist",
+            "note": "验证：输出应为 {\"type\":\"composer\",\"url\":\"https://mirrors.aliyun.com/composer/\"}"
+          }
+        ],
+        "notes": [
+          "换源后先 composer clear-cache，再从控制台日志确认请求打到 mirrors.aliyun.com",
+          "取消：composer config -g --unset repos.packagist",
+          "仅项目级：去掉 -g，写进当前 composer.json"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 295,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "tencent-composer",
+      "category": "php",
+      "name": "腾讯云 Composer",
+      "provider": "腾讯云",
+      "url": "https://mirrors.cloud.tencent.com/composer/",
+      "desc": "腾讯云 Composer 镜像，与阿里互为备选",
+      "usage": {
+        "label": "全局配置",
+        "steps": [
+          {
+            "cmd": "composer config -g repo.packagist composer https://mirrors.cloud.tencent.com/composer/"
+          }
+        ],
+        "notes": [
+          "2026 实测三个稳定全量 HTTPS 源之一（阿里 / 腾讯 / 华为）",
+          "URL 必须以 / 结尾"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 258,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "huawei-composer",
+      "category": "php",
+      "name": "华为云 Composer",
+      "provider": "华为云",
+      "url": "https://mirrors.huaweicloud.com/repository/php/",
+      "desc": "华为开源镜像站 Composer (Packagist) 镜像",
+      "usage": {
+        "label": "全局配置",
+        "steps": [
+          {
+            "cmd": "composer config -g repo.packagist composer https://mirrors.huaweicloud.com/repository/php/"
+          }
+        ],
+        "notes": [
+          "2026 实测可用；华为云 ECS 内网访问同区域更快",
+          "packagist.phpcomposer.com 与 laravel-china 已失效，不再推荐"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 675,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "huawei-nuget",
+      "category": "dotnet",
+      "name": "华为云 NuGet",
+      "provider": "华为云",
+      "url": "https://repo.huaweicloud.com/repository/nuget/v3/index.json",
+      "desc": "华为开源镜像站 NuGet (V3) 镜像，.NET 生态首选",
+      "usage": {
+        "label": "源配置",
+        "steps": [
+          {
+            "cmd": "dotnet nuget add source https://repo.huaweicloud.com/repository/nuget/v3/index.json -n huawei",
+            "note": ".NET CLI 添加源；Visual Studio 在 工具>NuGet 包管理器>程序包源 中添加同一地址"
+          },
+          {
+            "cmd": "dotnet nuget list source",
+            "note": "验证源已添加"
+          }
+        ],
+        "notes": [
+          "禁用官方源：dotnet nuget disable source nuget.org（可选）",
+          "华为云同步频率高，新包基本当日可用"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 11,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "tencent-nuget",
+      "category": "dotnet",
+      "name": "腾讯云 NuGet",
+      "provider": "腾讯云",
+      "url": "https://mirrors.cloud.tencent.com/nuget/",
+      "desc": "腾讯云 NuGet 镜像",
+      "usage": {
+        "label": "源配置",
+        "steps": [
+          {
+            "cmd": "dotnet nuget add source https://mirrors.cloud.tencent.com/nuget/ -n tencent"
+          }
+        ],
+        "notes": [
+          "Web 界面可直接搜索包与版本",
+          "作为华为/微软中国之外的备用源"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 181,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "tuna-debian",
+      "category": "apt",
+      "name": "清华 Debian 源",
+      "provider": "清华大学",
+      "url": "https://mirrors.tuna.tsinghua.edu.cn/debian/",
+      "desc": "Debian 系统软件源（清华 TUNA）",
+      "usage": {
+        "label": "sources.list 替换",
+        "steps": [
+          {
+            "cmd": "sudo sed -i 's|deb.debian.org|mirrors.tuna.tsinghua.edu.cn/debian|g' /etc/apt/sources.list\nsudo apt update",
+            "note": "security 源同样替换为 mirrors.tuna.tsinghua.edu.cn/debian-security"
+          }
+        ],
+        "notes": [
+          "清华 help 页提供各版本自动生成：https://mirrors.tuna.tsinghua.edu.cn/help/debian/",
+          "新版 Debian 的 sources 是 deb822 格式（.sources 文件）"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 83,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    },
+    {
+      "id": "ustc-arch",
+      "category": "apt",
+      "name": "中科大 Arch 源",
+      "provider": "中国科学技术大学",
+      "url": "https://mirrors.ustc.edu.cn/archlinux/",
+      "desc": "Arch / Arch Linux CN 软件源（中科大）",
+      "usage": {
+        "label": "pacman 源配置",
+        "steps": [
+          {
+            "cmd": "Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch",
+            "note": "将 /etc/pacman.d/mirrorlist 改为仅保留这一行，再 sudo pacman -Syy 刷新"
+          }
+        ],
+        "notes": [
+          "ArchlinuxCN 用户：/etc/pacman.conf 追加 [archlinuxcn]，Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch",
+          "科大为常用教育网源之一，亦可选清华 mirrors.tuna.tsinghua.edu.cn/archlinux"
+        ]
+      },
+      "lastCheck": {
+        "ok": true,
+        "latency": 59,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-07T13:41:14.865Z"
+      }
+    }
+  ]
+}
