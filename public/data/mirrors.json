@@ -1,7 +1,8 @@
 {
   "meta": {
     "title": "Dev Mirror Hub",
-    "updatedAt": "2026-09-08T06:43:58.889Z"
+    "updatedAt": "2026-09-08T12:03:23.625Z",
+    "probe": "local-china"
   },
   "categories": [
     {
@@ -88,10 +89,10 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 546,
+        "latency": 156,
         "status": 200,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
+        "time": "2026-09-08T12:03:23.625Z"
       }
     },
     {
@@ -116,10 +117,10 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 1262,
+        "latency": 356,
         "status": 404,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
+        "time": "2026-09-08T12:03:23.625Z"
       }
     },
     {
@@ -143,12 +144,13 @@
         ]
       },
       "lastCheck": {
-        "ok": false,
-        "latency": 252,
-        "status": null,
-        "error": "ETIMEDOUT",
-        "time": "2026-09-08T06:43:58.889Z"
-      }
+        "ok": true,
+        "latency": 169,
+        "status": 404,
+        "error": null,
+        "time": "2026-09-08T12:03:23.625Z"
+      },
+      "domestic": true
     },
     {
       "id": "tuna-pypi",
@@ -175,12 +177,13 @@
         ]
       },
       "lastCheck": {
-        "ok": false,
-        "latency": 253,
-        "status": null,
-        "error": "ETIMEDOUT",
-        "time": "2026-09-08T06:43:58.889Z"
-      }
+        "ok": true,
+        "latency": 492,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-08T12:03:23.625Z"
+      },
+      "domestic": true
     },
     {
       "id": "aliyun-pypi",
@@ -204,10 +207,10 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 1065,
+        "latency": 65,
         "status": 200,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
+        "time": "2026-09-08T12:03:23.625Z"
       }
     },
     {
@@ -231,12 +234,13 @@
         ]
       },
       "lastCheck": {
-        "ok": false,
-        "latency": 520,
-        "status": null,
-        "error": "ETIMEDOUT",
-        "time": "2026-09-08T06:43:58.889Z"
-      }
+        "ok": true,
+        "latency": 454,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-08T12:03:23.625Z"
+      },
+      "domestic": true
     },
     {
       "id": "sjtu-pypi",
@@ -260,11 +264,12 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 3713,
+        "latency": 117,
         "status": 200,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
-      }
+        "time": "2026-09-08T12:03:23.625Z"
+      },
+      "domestic": true
     },
     {
       "id": "aliyun-maven-public",
@@ -292,10 +297,10 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 1738,
+        "latency": 197,
         "status": 404,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
+        "time": "2026-09-08T12:03:23.625Z"
       }
     },
     {
@@ -320,10 +325,10 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 1038,
+        "latency": 100,
         "status": 404,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
+        "time": "2026-09-08T12:03:23.625Z"
       }
     },
     {
@@ -348,10 +353,10 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 2851,
+        "latency": 246,
         "status": 403,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
+        "time": "2026-09-08T12:03:23.625Z"
       }
     },
     {
@@ -376,10 +381,10 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 248,
+        "latency": 166,
         "status": 200,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
+        "time": "2026-09-08T12:03:23.625Z"
       }
     },
     {
@@ -408,10 +413,10 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 1427,
+        "latency": 52,
         "status": 200,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
+        "time": "2026-09-08T12:03:23.625Z"
       }
     },
     {
@@ -436,10 +441,10 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 159,
+        "latency": 2597,
         "status": 200,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
+        "time": "2026-09-08T12:03:23.625Z"
       }
     },
     {
@@ -463,12 +468,13 @@
         ]
       },
       "lastCheck": {
-        "ok": false,
-        "latency": 253,
-        "status": null,
-        "error": "ETIMEDOUT",
-        "time": "2026-09-08T06:43:58.889Z"
-      }
+        "ok": true,
+        "latency": 49,
+        "status": 404,
+        "error": null,
+        "time": "2026-09-08T12:03:23.625Z"
+      },
+      "domestic": true
     },
     {
       "id": "rsproxy",
@@ -492,10 +498,10 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 1484,
+        "latency": 205,
         "status": 200,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
+        "time": "2026-09-08T12:03:23.625Z"
       }
     },
     {
@@ -519,12 +525,13 @@
         ]
       },
       "lastCheck": {
-        "ok": false,
-        "latency": 252,
-        "status": null,
-        "error": "ETIMEDOUT",
-        "time": "2026-09-08T06:43:58.889Z"
-      }
+        "ok": true,
+        "latency": 522,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-08T12:03:23.625Z"
+      },
+      "domestic": true
     },
     {
       "id": "daocloud-docker",
@@ -553,10 +560,10 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 1007,
-        "status": 200,
+        "latency": 80,
+        "status": 302,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
+        "time": "2026-09-08T12:05:03.420Z"
       }
     },
     {
@@ -580,12 +587,13 @@
         ]
       },
       "lastCheck": {
-        "ok": false,
-        "latency": 252,
-        "status": null,
-        "error": "ETIMEDOUT",
-        "time": "2026-09-08T06:43:58.889Z"
-      }
+        "ok": true,
+        "latency": 112,
+        "status": 403,
+        "error": null,
+        "time": "2026-09-08T12:03:23.625Z"
+      },
+      "domestic": true
     },
     {
       "id": "1panel-docker",
@@ -609,10 +617,10 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 167,
+        "latency": 879,
         "status": 403,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
+        "time": "2026-09-08T12:03:23.625Z"
       }
     },
     {
@@ -636,12 +644,13 @@
         ]
       },
       "lastCheck": {
-        "ok": false,
-        "latency": 252,
-        "status": null,
-        "error": "ETIMEDOUT",
-        "time": "2026-09-08T06:43:58.889Z"
-      }
+        "ok": true,
+        "latency": 200,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-08T12:03:23.625Z"
+      },
+      "domestic": true
     },
     {
       "id": "aliyun-ubuntu",
@@ -665,10 +674,10 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 871,
+        "latency": 307,
         "status": 200,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
+        "time": "2026-09-08T12:03:23.625Z"
       }
     },
     {
@@ -692,12 +701,13 @@
         ]
       },
       "lastCheck": {
-        "ok": false,
-        "latency": 253,
-        "status": null,
-        "error": "ETIMEDOUT",
-        "time": "2026-09-08T06:43:58.889Z"
-      }
+        "ok": true,
+        "latency": 51,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-08T12:03:23.625Z"
+      },
+      "domestic": true
     },
     {
       "id": "tuna-brew",
@@ -724,12 +734,13 @@
         ]
       },
       "lastCheck": {
-        "ok": false,
-        "latency": 253,
-        "status": null,
-        "error": "ETIMEDOUT",
-        "time": "2026-09-08T06:43:58.889Z"
-      }
+        "ok": true,
+        "latency": 66,
+        "status": 404,
+        "error": null,
+        "time": "2026-09-08T12:03:23.625Z"
+      },
+      "domestic": true
     },
     {
       "id": "ustc-brew",
@@ -752,12 +763,13 @@
         ]
       },
       "lastCheck": {
-        "ok": false,
-        "latency": 252,
-        "status": null,
-        "error": "ETIMEDOUT",
-        "time": "2026-09-08T06:43:58.889Z"
-      }
+        "ok": true,
+        "latency": 435,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-08T12:03:23.625Z"
+      },
+      "domestic": true
     },
     {
       "id": "flutter-cn",
@@ -785,10 +797,10 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 147,
+        "latency": 208,
         "status": 200,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
+        "time": "2026-09-08T12:03:23.625Z"
       }
     },
     {
@@ -812,12 +824,13 @@
         ]
       },
       "lastCheck": {
-        "ok": false,
-        "latency": 252,
-        "status": null,
-        "error": "ETIMEDOUT",
-        "time": "2026-09-08T06:43:58.889Z"
-      }
+        "ok": true,
+        "latency": 283,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-08T12:03:23.625Z"
+      },
+      "domestic": true
     },
     {
       "id": "ustc-conda",
@@ -840,12 +853,13 @@
         ]
       },
       "lastCheck": {
-        "ok": false,
-        "latency": 252,
-        "status": null,
-        "error": "ETIMEDOUT",
-        "time": "2026-09-08T06:43:58.889Z"
-      }
+        "ok": true,
+        "latency": 428,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-08T12:03:23.625Z"
+      },
+      "domestic": true
     },
     {
       "id": "aliyun-helm",
@@ -873,10 +887,10 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 843,
+        "latency": 256,
         "status": 404,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
+        "time": "2026-09-08T12:03:23.625Z"
       }
     },
     {
@@ -901,10 +915,10 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 1819,
+        "latency": 167,
         "status": 200,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
+        "time": "2026-09-08T12:03:23.625Z"
       }
     },
     {
@@ -929,10 +943,10 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 7886,
+        "latency": 165,
         "status": 200,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
+        "time": "2026-09-08T12:03:23.625Z"
       }
     },
     {
@@ -961,10 +975,10 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 1636,
+        "latency": 596,
         "status": 200,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
+        "time": "2026-09-08T12:03:23.625Z"
       }
     },
     {
@@ -989,10 +1003,10 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 971,
+        "latency": 240,
         "status": 400,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
+        "time": "2026-09-08T12:03:23.625Z"
       }
     },
     {
@@ -1016,12 +1030,13 @@
         ]
       },
       "lastCheck": {
-        "ok": false,
-        "latency": 253,
-        "status": null,
-        "error": "ETIMEDOUT",
-        "time": "2026-09-08T06:43:58.889Z"
-      }
+        "ok": true,
+        "latency": 73,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-08T12:03:23.625Z"
+      },
+      "domestic": true
     },
     {
       "id": "flutter-sjtu",
@@ -1045,10 +1060,10 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 3226,
+        "latency": 265,
         "status": 200,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
+        "time": "2026-09-08T12:03:23.625Z"
       }
     },
     {
@@ -1072,12 +1087,13 @@
         ]
       },
       "lastCheck": {
-        "ok": false,
-        "latency": 253,
-        "status": null,
-        "error": "ETIMEDOUT",
-        "time": "2026-09-08T06:43:58.889Z"
-      }
+        "ok": true,
+        "latency": 64,
+        "status": 404,
+        "error": null,
+        "time": "2026-09-08T12:03:23.625Z"
+      },
+      "domestic": true
     },
     {
       "id": "huawei-npm",
@@ -1101,10 +1117,10 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 2118,
+        "latency": 145,
         "status": 200,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
+        "time": "2026-09-08T12:03:23.625Z"
       }
     },
     {
@@ -1129,10 +1145,10 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 1074,
+        "latency": 186,
         "status": 429,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
+        "time": "2026-09-08T12:03:23.625Z"
       }
     },
     {
@@ -1157,10 +1173,10 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 714,
+        "latency": 38,
         "status": 200,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
+        "time": "2026-09-08T12:03:23.625Z"
       }
     },
     {
@@ -1184,12 +1200,13 @@
         ]
       },
       "lastCheck": {
-        "ok": false,
-        "latency": 802,
-        "status": null,
-        "error": "ETIMEDOUT",
-        "time": "2026-09-08T06:43:58.889Z"
-      }
+        "ok": true,
+        "latency": 251,
+        "status": 404,
+        "error": null,
+        "time": "2026-09-08T12:03:23.625Z"
+      },
+      "domestic": true
     },
     {
       "id": "docker-1ms",
@@ -1213,10 +1230,10 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 1864,
+        "latency": 354,
         "status": 200,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
+        "time": "2026-09-08T12:03:23.625Z"
       }
     },
     {
@@ -1241,10 +1258,10 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 2931,
+        "latency": 1064,
         "status": 200,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
+        "time": "2026-09-08T12:03:23.625Z"
       }
     },
     {
@@ -1274,11 +1291,12 @@
       },
       "lastCheck": {
         "ok": false,
-        "latency": 466,
+        "latency": 25,
         "status": null,
         "error": "ERR_TLS_CERT_ALTNAME_INVALID",
-        "time": "2026-09-08T06:43:58.889Z"
-      }
+        "time": "2026-09-08T12:03:23.625Z"
+      },
+      "domestic": true
     },
     {
       "id": "tuna-rubygems",
@@ -1301,12 +1319,13 @@
         ]
       },
       "lastCheck": {
-        "ok": false,
-        "latency": 253,
-        "status": null,
-        "error": "ETIMEDOUT",
-        "time": "2026-09-08T06:43:58.889Z"
-      }
+        "ok": true,
+        "latency": 73,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-08T12:03:23.625Z"
+      },
+      "domestic": true
     },
     {
       "id": "aliyun-composer",
@@ -1335,10 +1354,10 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 710,
+        "latency": 137,
         "status": 200,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
+        "time": "2026-09-08T12:03:23.625Z"
       }
     },
     {
@@ -1362,10 +1381,10 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 2013,
+        "latency": 634,
         "status": 200,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
+        "time": "2026-09-08T12:03:23.625Z"
       }
     },
     {
@@ -1389,10 +1408,10 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 2780,
+        "latency": 714,
         "status": 200,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
+        "time": "2026-09-08T12:03:23.625Z"
       }
     },
     {
@@ -1421,10 +1440,10 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 1522,
+        "latency": 19,
         "status": 200,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
+        "time": "2026-09-08T12:03:23.625Z"
       }
     },
     {
@@ -1448,10 +1467,10 @@
       },
       "lastCheck": {
         "ok": true,
-        "latency": 56,
+        "latency": 156,
         "status": 200,
         "error": null,
-        "time": "2026-09-08T06:43:58.889Z"
+        "time": "2026-09-08T12:03:23.625Z"
       }
     },
     {
@@ -1475,12 +1494,13 @@
         ]
       },
       "lastCheck": {
-        "ok": false,
-        "latency": 254,
-        "status": null,
-        "error": "ETIMEDOUT",
-        "time": "2026-09-08T06:43:58.889Z"
-      }
+        "ok": true,
+        "latency": 70,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-08T12:03:23.625Z"
+      },
+      "domestic": true
     },
     {
       "id": "ustc-arch",
@@ -1503,12 +1523,13 @@
         ]
       },
       "lastCheck": {
-        "ok": false,
-        "latency": 252,
-        "status": null,
-        "error": "ETIMEDOUT",
-        "time": "2026-09-08T06:43:58.889Z"
-      }
+        "ok": true,
+        "latency": 51,
+        "status": 200,
+        "error": null,
+        "time": "2026-09-08T12:03:23.625Z"
+      },
+      "domestic": true
     }
   ]
 }

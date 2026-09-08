@@ -13,8 +13,8 @@ import { fileURLToPath } from 'node:url'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const DATA_PATH = resolve(__dirname, '../public/data/mirrors.json')
 
-const TIMEOUT_MS = 15_000 // 单个镜像探测超时
-const RETRIES = 1 // 失败的镜像重试次数（避免瞬时抖动误报）
+const TIMEOUT_MS = 30_000 // 单个镜像探测超时（海外节点访问国内/教育网源较慢，放宽）
+const RETRIES = 2 // 失败的镜像重试次数（避免瞬时抖动误报）
 const CONCURRENCY = 3 // 同时探测数量，避免过慢或触发站点限流
 
 async function probe(url) {
@@ -86,6 +86,8 @@ async function main() {
   })
 
   data.meta.updatedAt = now
+  // 标注探测节点：GitHub Runner 在海外，访问国内/教育网源可能超时
+  data.meta.probe = process.env.GITHUB_ACTIONS ? 'github-actions-overseas' : 'local-china'
   writeFileSync(DATA_PATH, JSON.stringify(data, null, 2) + '\n', 'utf-8')
 
   console.log(`\n检测完成：${online}/${results.length} 在线，结果已写入 ${DATA_PATH}`)

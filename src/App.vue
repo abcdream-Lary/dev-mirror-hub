@@ -47,13 +47,14 @@ const filteredMirrors = computed(() => {
 const countByCategory = (id) =>
   mirrors.value.filter((m) => m.category === id).length
 
-// 侧边栏底部：全站状态摘要
+// 侧边栏底部：全站状态摘要（国内受限源单独计数，不混入异常）
 const allStats = computed(() => {
   const list = mirrors.value
   const checked = list.filter((m) => m.lastCheck)
   return {
     ok: checked.filter((m) => m.lastCheck.ok).length,
-    down: checked.filter((m) => !m.lastCheck.ok).length,
+    down: checked.filter((m) => !m.lastCheck.ok && !m.domestic).length,
+    restricted: checked.filter((m) => !m.lastCheck.ok && m.domestic).length,
     unknown: list.length - checked.length
   }
 })
@@ -122,6 +123,7 @@ const updatedText = computed(() => {
         <div class="foot-stats">
           <span class="foot-item"><i class="dot ok" />在线 {{ allStats.ok }}</span>
           <span class="foot-item"><i class="dot down" />异常 {{ allStats.down }}</span>
+          <span v-if="allStats.restricted" class="foot-item"><i class="dot unknown" />受限 {{ allStats.restricted }}</span>
           <span v-if="allStats.unknown" class="foot-item"><i class="dot unknown" />未检测 {{ allStats.unknown }}</span>
         </div>
         <div class="foot-updated">自动检测更新于 {{ updatedText }}</div>
@@ -170,8 +172,7 @@ const updatedText = computed(() => {
       <p v-else class="empty">没有匹配的镜像</p>
 
       <footer class="footer">
-        状态由 GitHub Actions 每日自动检测：任何状态码响应均视为在线（4xx/5xx 说明服务可达）；
-        「测延迟」为本机实时探测，结果受本地网络影响，仅作参考。Docker Hub 加速器随时可能调整，建议同时配置多个源。
+        自动检测由 GitHub 全球节点（海外）执行：任何状态码响应均视为在线；清华/中科大等教育网源在海外节点通常无法直连，显示「受限/海外超时」属节点网络限制而非站点故障。请以卡片右上角状态徽章（点击即可按本机网络实测）为准。「测延迟」为浏览器本地结果，受本机网络影响。Docker Hub 加速器等第三方服务随时可能调整，建议同时配置多个源。
       </footer>
     </main>
 

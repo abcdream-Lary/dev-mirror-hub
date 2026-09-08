@@ -62,15 +62,17 @@ const status = computed(() => {
   }
   const lc = props.mirror.lastCheck
   if (!lc) return { label: '未检测', cls: 'unknown' }
-  return lc.ok
-    ? { label: '正常', cls: 'ok', latency: lc.latency }
-    : { label: '异常', cls: 'down' }
+  if (lc.ok) return { label: '正常', cls: 'ok', latency: lc.latency }
+  // 国内/教育网源在海外检测节点失败属网络受限，非站点故障，提示本机实测
+  if (props.mirror.domestic) return { label: '海外超时', cls: 'warn', latency: null }
+  return { label: '异常', cls: 'down' }
 })
 
 const statusDetail = computed(() => {
   const lc = props.mirror.lastCheck
   if (!lc) return '尚未检测'
   if (lc.ok) return `${lc.status} 响应 · ${lc.latency}ms`
+  if (props.mirror.domestic) return 'GitHub 海外节点不可达（教育网源），点击右上角状态可本机实测'
   return lc.error ? `连接失败：${lc.error}` : '连接失败'
 })
 </script>
@@ -213,6 +215,14 @@ const statusDetail = computed(() => {
 
 .status.down .dot {
   background: var(--down);
+}
+
+.status.warn .dot {
+  background: var(--text-3);
+}
+
+.status.warn {
+  color: var(--text-3);
 }
 
 .desc {
